@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Edit <%= @cocktail.name %></h1>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name, label: "Enter a new name" %>
+    <%= f.submit class:"btn btn-success"%>
+    <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail), class:"btn btn-primary" %>
+    <%= link_to "Go home", cocktails_path, class:"btn btn-warning" %>
+  <% end %>
+</div>

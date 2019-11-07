@@ -1,0 +1,30 @@
+<div class="banner">
+  <div class="nav"></div>
+  <div class="container">
+    <div class="row justify-content-around"></div>
+    <div>
+        <h1>Cocktaaaaaaiiiiiils</h1>
+        <% @cocktails.each do |cocktail| %>
+           <div class="card col-3">
+            <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
+            <% cocktail.ingredients.each do |ingredient| %>
+               <p><%= ingredient.name %></p>
+            <% end %>
+            <%= link_to "Edit", edit_cocktail_path(cocktail), class:"btn btn-success" %>
+            <%= link_to "Delete", cocktail_path(cocktail), method: :delete, class:"btn btn-danger" %>
+          </div>
+        <% end %>
+      </div>
+</div>
+      <div>
+        <h2>Create a new Cocktail</h2>
+          <%= simple_form_for @cocktail do |f| %>
+            <%= f.input :name, label: "Enter a name for your cocktail" %>
+            <%= f.submit class:"btn btn-success"%>
+          <% end %>
+      </div>
+    </div>
+  </div>
+
+
+
