@@ -1,26 +1,17 @@
 <div
   class="nav">
 </div>
-<div class="turtle-banner" style="background-image: url(<%= cl_image_path("turtle_banner_pcrnb2")%>); background-size: cover; height: 100% ">
+<div class="turtle-banner" style="background-image: url(<%= cl_image_path("turtle_banner_pcrnb2")%>); background-size: cover; height: 100vh ">
   <div class="container">
     <div>
       <h1
         class="text-center font-weight-bold">Cocktaaaaaaiiiiiils
       </h1>
       <% @cocktails.each do |cocktail| %>
-        <%= render "card" %>
+        <%= render "card", cocktail: cocktail %>
       <% end %>
     </div>
-    <div class="card">
-      <h2>
-        Create a new Cocktail
-      </h2>
-        <%= simple_form_for @cocktail do |f| %>
-          <%= f.input :name, label: "Enter a name for your cocktail" %>
-          <%= f.input :photo %>
-          <%= f.input :photo_cache, as: :hidden %>
-          <%= f.submit class:"btn btn-success"%>
-        <% end %>
+       <%= render "create_card" %>
     </div>
   </div>
 </div>
