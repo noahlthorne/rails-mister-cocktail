@@ -1,0 +1,20 @@
+<div class="card m-8" style="width: 18rem;">
+  <div class="card-body">
+    <% @cocktails.each do |cocktail| %>
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <% cocktail.ingredients.each do |ingredient| %>
+        <h6 class="card-subtitle mb-2 text-muted">
+            <%= ingredient.name %>
+        </h6>
+      <% cocktail.doses.each do |dose| %>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <%= dose.description %>
+        </h6>
+      <% end %>
+      <% end %>
+      <p class="card-text">Cocktail Description</p>
+      <%= link_to "Edit", edit_cocktail_path(cocktail), class:"btn btn-success" %>
+      <%= link_to "Delete", cocktail_path(cocktail), method: :delete, class:"btn btn-danger" %>
+    <% end %>
+  </div>
+</div>

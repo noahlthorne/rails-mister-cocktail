@@ -1,23 +1,20 @@
-<div class="nav"></div>
-<div class="container">
-  <div class="row justify-content-around"></div>
-  <div>
-      <h1>Cocktaaaaaaiiiiiils</h1>
-      <%= cl_image_path("turtle_banner_pcrnb2",
-      width: 400, height: 300, crop: :fill) %>
+<div
+  class="nav">
+</div>
+<div class="turtle-banner" style="background-image: url(<%= cl_image_path("turtle_banner_pcrnb2")%>); background-size: cover; height: 100% ">
+  <div class="container">
+    <div>
+      <h1
+        class="text-center font-weight-bold">Cocktaaaaaaiiiiiils
+      </h1>
       <% @cocktails.each do |cocktail| %>
-         <div class="card col-3">
-          <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
-          <% cocktail.ingredients.each do |ingredient| %>
-             <p><%= ingredient.name %></p>
-          <% end %>
-          <%= link_to "Edit", edit_cocktail_path(cocktail), class:"btn btn-success" %>
-          <%= link_to "Delete", cocktail_path(cocktail), method: :delete, class:"btn btn-danger" %>
-        </div>
+        <%= render "card" %>
       <% end %>
     </div>
     <div class="card">
-      <h2>Create a new Cocktail</h2>
+      <h2>
+        Create a new Cocktail
+      </h2>
         <%= simple_form_for @cocktail do |f| %>
           <%= f.input :name, label: "Enter a name for your cocktail" %>
           <%= f.input :photo %>
