@@ -15,7 +15,7 @@
       <p class="card-text">Cocktail Description</p>
       <div class="d-flex justify-content-between">
         <%= link_to "Edit", edit_cocktail_path(cocktail), class:"btn btn-success" %>
-        <%= link_to "Delete", "#", class:"btn btn-danger", id:"sweet-alert-demo"%>
+        <%= content_tag "a", "Delete", class:"btn btn-danger", id:"sweet-alert-demo", data: { cocktail_id: cocktail.id } %>
       </div>
   </div>
 </div>
