@@ -3,15 +3,28 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.5);
 }
+.cocktail-cards {
+  padding: 0px;
+}
 
 .words {
   color: #665B5A;
 }
 
-.coctail-cards {
-  margin-top: 54px;
-}
-
 .btn-success {
   border-radius: 4px;
+}
+
+#cocktails-index {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.create-card {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  background-color: #FAFAFA;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 24px;
 }

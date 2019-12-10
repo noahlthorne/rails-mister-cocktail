@@ -12,3 +12,30 @@
     color: white;
   }
 }
+
+// .submit-new-button {
+//   position: relative;
+//   bottom: -2px;
+//   left: 930px;
+// }
+
+.scrollbutton {
+  color: white;
+  bottom: 50px;
+  right: 643px;
+  position: absolute;
+}
+
+.scrollbutton-font {
+  scroll-behavior: smooth;
+}
+
+.fa-arrow-circle-down {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}

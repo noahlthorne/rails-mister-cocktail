@@ -1,6 +1,9 @@
 import 'bootstrap';
 
+import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initSweetalert } from '../plugins/init_sweetalert';
+
+initUpdateNavbarOnScroll();
 
 initSweetalert('#sweet-alert-demo', {
   title: "Heads up!",

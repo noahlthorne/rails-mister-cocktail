@@ -1,15 +1,26 @@
 <div
   class="nav">
 </div>
-<div class="main-banner"></div>
-<div class="container">
-  <div class="coctail-cards d-flex">
-    <% @cocktails.each do |cocktail| %>
-      <%= render "card", cocktail: cocktail %>
-    <% end %>
+<div class="main-banner">
+  <div id="header-text">
+    <h1>Find your favorite cocktail recipe</h1>
   </div>
-    <%= render "create_card" %>
+  <div class="scrollbutton text-center">
+    <h4 >Find recipes</h4>
+    <a class="scrollbutton-font" href="#cocktails-index" data-scroll="#cocktails-index"
+     onchange="scrollto(this);">
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+  </div>
 </div>
 
-
-
+<div id="cocktails-index">
+  <div class="container">
+    <div class="d-flex mb-5">
+      <% @cocktails.each do |cocktail| %>
+        <%= render "card", cocktail: cocktail %>
+      <% end %>
+    </div>
+      <%= render "create_card" %>
+  </div>
+</div>
