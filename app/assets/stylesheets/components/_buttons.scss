@@ -1,3 +1,14 @@
 .btn-outline-success {
   border-radius: 4px;
 }
+
+.btn-danger {
+  border-radius: 4px;
+  background-color: #ED9A24;
+  border: none;
+  color: black;
+  &:hover {
+    background-color: #DD8F21;
+    color: white;
+  }
+}
