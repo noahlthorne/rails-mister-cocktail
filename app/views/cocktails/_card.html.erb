@@ -15,7 +15,8 @@
       <p class="card-text">Cocktail Description</p>
       <div class="d-flex justify-content-between">
         <%= link_to "Edit", edit_cocktail_path(cocktail), class:"btn btn-success" %>
-        <%= content_tag "a", "Delete", class:"btn btn-danger", id:"sweet-alert-demo", data: { cocktail_id: cocktail.id } %>
+        <%#= link_to "Delete", destroy_cocktail_path(cocktail), data: {:confirm => 'Are you sure?'}, :method => :delete %>
+        <%#= content_tag "a", "Delete", class:"btn btn-danger", id:"sweet-alert-demo", method: delete, data: { cocktail_id: cocktail.id } %>
       </div>
   </div>
 </div>
