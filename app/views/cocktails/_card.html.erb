@@ -12,7 +12,7 @@
         </div>
         <hr>
       <% end %>
-      <p class="card-text">Cocktail Description</p>
+      <p class="card-text"><%= cocktail.description %></p>
       <div class="d-flex justify-content-between">
         <%= link_to "Edit", edit_cocktail_path(cocktail), class:"btn btn-success" %>
         <%#= link_to "Delete", destroy_cocktail_path(cocktail), data: {:confirm => 'Are you sure?'}, :method => :delete %>
