@@ -8,6 +8,7 @@
   font-family: 'Bebas Neue', cursive;
   font-size: 28px;
   letter-spacing: 2px;
+  text-shadow: 0px 2px 2px 4px (0, 0, 0, 0.3);
 }
 
 .navbar-lewagon {
@@ -21,4 +22,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.form-control {
+  border-radius: 4px;
 }

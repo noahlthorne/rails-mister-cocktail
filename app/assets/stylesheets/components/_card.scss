@@ -1,5 +1,5 @@
 .card {
-  border-radius: 20px;
+  border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -10,4 +10,8 @@
 
 .coctail-cards {
   margin-top: 54px;
+}
+
+.btn-success {
+  border-radius: 4px;
 }
